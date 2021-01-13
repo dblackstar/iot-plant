@@ -11,6 +11,10 @@ Comoponents used:
 
 To use it you need to download the Blynk app and set your Auth code given by the app into the Arduino code
 
+<<<<<<< HEAD
 <p align="center">
   <img src="app.png" width="350">
 </p>
+=======
+![Screenshot](app.png)
+>>>>>>> 5557d27ac3612fdb9bc6b37bd467a576654fe1ff
