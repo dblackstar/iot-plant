@@ -5,8 +5,8 @@
 #include <TimeLib.h>
 #include <WidgetRTC.h>
 
-#define DHTPIN 4 // PIN Digital 2 conectado a la libreria del sensor
-#define DHTTYPE DHT11 // El tipo de sensor que estoy usando es el DHT11
+#define DHTPIN 4 
+#define DHTTYPE DHT11 
 #define BLYNK_PRINT Serial
 
 BlynkTimer timer;
@@ -16,12 +16,12 @@ WidgetLCD lcd(V2);
 WidgetLCD lcd2(V4);
 String msg = "";
 
-char auth[] = "Dz1hj3XaFSdLU4ExpMMPMjSjNvdeatrh";
-const int sensorTierra = A0; // PIN Analogo 0
-const int boton = 2; // PIN Digital 4
+char auth[] = ""; // Your Blynk auth string here
+const int sensorTierra = A0; 
+const int boton = 2; 
 int estado = 0;
-int maximo = 1024; // El valor del sensor en tierra completamente seca
-int minimo = 400; // El valor del sensor en agua
+int maximo = 1024; 
+int minimo = 400; 
 int estadoBoton = 0;
 String hora = "";
 String fecha = "";
@@ -52,16 +52,13 @@ void grabarHora()
 
 BLYNK_CONNECTED() 
 {
-  // Sincronizar la hora al momento de conectarse
+  
   rtc.begin();
 }
 
 void humedad()
 {
   estado = analogRead(sensorTierra);
-  // cuando mapeamos los valores a un porcentaje, los primeros dos parametros representan
-  // el valor maximo del sensor en tierra seca, y el segundo su valor minimo en tierra humeda.
-  // estos valores se necesitan ajustar dependiendo el tipo de tierra, el sensor, la planta, y de en donde se encuentre la planta
   estado = map(estado,maximo,minimo,0,100); 
   Serial.print("Humedad en la tierra: "); 
   Serial.print(estado);
@@ -89,8 +86,8 @@ void temperatura()
 {
     float h = dht.readHumidity();
     float t = dht.readTemperature();
-    Blynk.virtualWrite(V5, h);  // PIN virtual 5 para mostrar humedad
-    Blynk.virtualWrite(V6, t);  // PIN virtual 5 para mostrar temperatura
+    Blynk.virtualWrite(V5, h); 
+    Blynk.virtualWrite(V6, t);  
     Serial.print("Humedad: ");
     Serial.print(h);
     Serial.print(" %\t");
@@ -102,7 +99,7 @@ void temperatura()
 void setup()
 {
   Serial.begin(9600);
-  Blynk.begin(auth, "MEGACABLE-2E9E", "BKwg4rqu");
+  Blynk.begin(auth, "your wifi router here", "your router key here");
   pinMode(sensorTierra, INPUT);
   pinMode(boton, INPUT_PULLUP);
   dht.begin();
