@@ -1,7 +1,7 @@
 # Plant -IOT
 Plant monitoring station using an esp8266 and blynk app
 
-Comoponents used:
+Components used:
 <ul>
   <li>DHT11 humidity and temperature sensor</li>
   <li>Soil moisture sensor</li>
@@ -11,9 +11,8 @@ Comoponents used:
 
 To use it you need to download the Blynk app, start a new project, and copy your Auth code given by the app into the Arduino code.
 
-![](imgs/app.png =x100)
-<p>
+<kbd>
   ❮img src="imgs/app.png" width="100"❯
   ❮img src="imgs/app.jpg" width="100"❯
   ❮img src="imgs/diagram.jpg" width="100"❯
-</p>
+</kbd>
