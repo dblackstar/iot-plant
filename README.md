@@ -11,8 +11,6 @@ Components used:
 
 To use it you need to download the Blynk app, start a new project, and copy your Auth code given by the app into the Arduino code.
 
-<kbd>
-  ❮img src="imgs/app.png" width="100"❯
-  ❮img src="imgs/app.jpg" width="100"❯
-  ❮img src="imgs/diagram.jpg" width="100"❯
-</kbd>
+<img src="imgs/app.png" width="100" alt="img">
+<img src="imgs/app.jpg" width="100">
+<img src="imgs/diagram.jpg" width="100">
