@@ -11,5 +11,5 @@ Comoponents used:
 
 To use it you need to download the Blynk app, start a new project, and copu your Auth code given by the app into the Arduino code
 
-![](imgs/app.png)
-![](imgs/plant.png)
+❮img src="imgs/app.png" width="100" ❯
+❮img src="imgs/app.jpg" width="100" ❯
